@@ -12,8 +12,12 @@ const multer  = require('multer')
 const storage = multer.memoryStorage()
 const upload = multer({ storage: storage })
 
-router.get('*', (request, response) => {
-	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+router.get('*', (req, res) => {
+	res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
+
+router.get('/signup', (req, res) => {
+	res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
 // API Routes
