@@ -38,7 +38,7 @@ function App() {
             <Password />
           </Route>
           <Route exact path='/dashboard'>
-            <Authentication />
+            {/* <Authentication /> */}
             <Dashboard />
           </Route>
           <Route exact path='/matches' >

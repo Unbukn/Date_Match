@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { } from 'react-bootstrap'
 import API from '../../utils/API'
 
 
@@ -19,7 +18,7 @@ let [theUser, userState] = useState([])
                 if (res.status = 500) {
                     // The user is not Authenticated
                     console.log("This user is not authenticated")
-                    window.location.href = "/"
+                    // window.location.href = "/"
                 } else {
                     console.log("This user is authenticated")
                 }
