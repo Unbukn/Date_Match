@@ -21,8 +21,9 @@
     "recharts": "^1.8.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "heroku-postbuild": "npm run build"
+    "start": "node index.js",
+    "build": "webpack",
+    "heroku-postbuild": "echo Skip build on Heroku"
   },
   "eslintConfig": {
     "extends": "react-app"
