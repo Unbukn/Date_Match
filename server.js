@@ -1,3 +1,4 @@
+const fs
 const path = require('path');
 const express = require('express');
 const db = require('./models'); //Requiring models folder to set up sequelize
@@ -15,7 +16,6 @@ app.use(passport.session());
 // Configure body parser for AJAX requests
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
 // Serve up static assets
 if(process.env.NODE_ENV === 'production'){
 	app.use(express.static('client/build'));
