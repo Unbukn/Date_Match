@@ -4,15 +4,14 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import DashboardIcon from '@material-ui/icons/Dashboard';
-import PeopleIcon from '@material-ui/icons/People';
-import Logout from '../Logout'
+import Logout from '../Logout';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
-import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import CreateDate from '../CreateDate'
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import TwitterIcon from '@material-ui/icons/Twitter';
-
+import HelpIcon from '@material-ui/icons/Help';
+import SportsKabaddiIcon from '@material-ui/icons/SportsKabaddi';
 
 export const mainListItems = (
   <div>
@@ -24,7 +23,7 @@ export const mainListItems = (
     </ListItem>
     <ListItem button component="a" href="/community">
       <ListItemIcon>
-        <PeopleIcon />
+        <SportsKabaddiIcon />
       </ListItemIcon>
       <ListItemText primary="Community" />
     </ListItem>
@@ -40,12 +39,6 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Matches" />
     </ListItem>
-    <ListItem button >
-      <ListItemIcon>
-        <ExitToAppIcon />
-      </ListItemIcon>
-      <Logout />
-    </ListItem>
   </div>
 
 );
@@ -58,6 +51,18 @@ export const secondaryListItems = (
         <TwitterIcon />
       </ListItemIcon>
       <CreateDate/>
+    </ListItem>
+    <ListItem button component="a" href="/password">
+      <ListItemIcon>
+        <HelpIcon />
+      </ListItemIcon>
+      <ListItemText primary="Change Password" />
+    </ListItem>
+    <ListItem button component="a" href="/" onClick={Logout}>
+      <ListItemIcon>
+        <ExitToAppIcon />
+      </ListItemIcon>
+      <Logout />
     </ListItem>
   </div>
 ); 

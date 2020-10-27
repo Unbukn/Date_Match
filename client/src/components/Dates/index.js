@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Row, Col, Container, Card, Accordion, Media } from 'react-bootstrap'
-import Nav from '../Nav';
-import Footer from '../Footer'
-import Logout from '../Logout'
-import CreateDate from '../CreateDate'
-import Profile from '../Profile'
+import { Row, Col, Container, Accordion } from 'react-bootstrap'
 import API from '../../utils/API'
-import DeleteButton from '../DeleteButton'
-import OtherProfileMod from "../OtherProfileMod"
 import UserProfileList from "../UserProfileList"
 // import './style.css';
 
@@ -56,12 +49,12 @@ const Dashboard = () => {
             <div>
                 <Container>
                     <Row className="communityRow">
-                    <h2>User Community</h2>
+                    {/* <h2>User Community</h2> */}
                         
                     </Row>
-                    <Row>
+                    <Col>
                     <Accordion defaultActiveKey="0">
-                            <h2>Posted Dates</h2>
+                            {/* <h2>Posted Dates</h2> */}
                             {dates.length ? (
                                 <div>
                                     {<UserProfileList data={dates}/>}
@@ -70,7 +63,7 @@ const Dashboard = () => {
                                     <h3>No Results to Display </h3>
                                 )}
                         </Accordion>
-                    </Row>
+                    </Col>
 
                 </Container>
             </div>
