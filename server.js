@@ -1,4 +1,4 @@
-const fs
+const fs = require('fs');
 const path = require('path');
 const express = require('express');
 const db = require('./models'); //Requiring models folder to set up sequelize
