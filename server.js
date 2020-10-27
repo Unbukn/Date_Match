@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const db = require('./models'); //Requiring models folder to set up sequelize
 const routes = require('./routes'); //Requiring routes folder that can hold api and html routes
