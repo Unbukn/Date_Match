@@ -5,7 +5,7 @@ const routes = require('./routes'); //Requiring routes folder that can hold api 
 const app = express();
 const passport = require("./config/passport"); // Requiring passport
 const session = require("express-session"); // Requiring session for passport
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 5000;
 
 // passport config
 app.use(session({
@@ -23,11 +23,10 @@ app.use(express.json());
 
 // Serve up static assets
 if (process.env.NODE_ENV === 'production') {
-	app.use(express.static('client/build/public'));
+	app.use(express.static('client/build'));
 }
 // Html Routes
 app.get('/', (req, res) => {
-	console.log("kjsfgahisdbfgasdfajsdfasdfasdf")
 	res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
